@@ -1,13 +1,37 @@
-import { SafeAreaView,View } from "react-native"
+import { StatusBar } from "expo-status-bar";
+import { Image, ImageBackground, StyleSheet, Text, View } from "react-native";
 
-const SplashScreen = () => {
+export default function SplashScreen() {
   return (
-    <SafeAreaView>
-        <View>
+    <View style={styles.container}>
+      <StatusBar style="auto" />
 
-        </View>
-    </SafeAreaView>
-  )
+      <ImageBackground
+        source={require("../assets/gradient.png")}
+        style={styles.imageBackground}
+      >
+        <Image
+          source={require("../assets/music-logo-solid.png")}
+          style={styles.img}
+        />
+      </ImageBackground>
+    </View>
+  );
 }
 
-export default SplashScreen
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+  imageBackground: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  img: {
+    flex: 1,
+    height: 200,
+    width: 200,
+    resizeMode: "contain",
+  },
+});
