@@ -1,16 +1,16 @@
 import { StatusBar } from "expo-status-bar";
 import { ImageBackground, StyleSheet, Text, View } from "react-native";
-import SplashScreen from "./Pages/SplashScreen";
 import Access from "./Pages/Access";
 import SignIn from "./Pages/SignIn";
+import Dashboard from "./Pages/Dashboard";
 
 export default function App() {
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
-      {/* <SplashScreen /> */}
       {/* <Access /> */}
-      <SignIn/>
+      {/* <SignIn/> */}
+      <Dashboard />
     </View>
   );
 }

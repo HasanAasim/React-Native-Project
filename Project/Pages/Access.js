@@ -15,19 +15,22 @@ export default function Access() {
         source={require("../assets/acess.png")}
         style={styles.imageBackground}
       >
-        <Image
-          source={require("../assets/music-logo-solid.png")}
-          style={styles.img}
-        />
-
-        <Text style={styles.txt}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. ficia
-          deserunt mollit anim id est laborum.
-        </Text>
-
-        <Button title="Sign In" />
-        <Button title="Sign Up" />
+        <View style={{ position: "absolute" }}>
+          <Image
+            source={require("../assets/music-logo-solid.png")}
+            style={styles.img}
+          />
+        </View>
+        <View>
+          <Text style={styles.txt}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore
+          </Text>
+        </View>
+        <View>
+          <Button title="Sign In" />
+          <Button title="Sign Up" />
+        </View>
       </ImageBackground>
     </View>
   );
@@ -40,15 +43,23 @@ const styles = StyleSheet.create({
   },
 
   imageBackground: {
-    flex: 1,
+    // flex: 1,
     alignItems: "center",
     justifyContent: "center",
     width: "100%",
     height: "100%",
+    resizeMode: "cover",
+    position: "absolute",
+    opacity: 1,
   },
   txt: {
     color: "white",
-    padding: 20,
+    // padding: 20,
+    textAlign: "center",
+    letterSpacing: 0.7,
+    paddingTop: 40,
+    padding: (0, 0, 70),
+    marginTop: 330,
   },
 
   img: {
